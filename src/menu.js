@@ -3,9 +3,10 @@ export const menu = () => {
 
   const jargon = document.createElement("p");
   jargon.textContent = "TONIGHT'S FIRE";
+  jargon.id = "jargon";
   content.appendChild(jargon);
 
-  const title = document.createElement("h1");
+  const title = document.createElement("h2");
   title.textContent = "Menu";
   content.appendChild(title);
 
@@ -69,6 +70,7 @@ export const menu = () => {
 
     const menuTitle = document.createElement("p");
     menuTitle.textContent = menu.title;
+    menuTitle.id = "menuTitle";
     article.appendChild(menuTitle);
 
     menu.items.forEach((item) => {
@@ -80,9 +82,13 @@ export const menu = () => {
 
       const menuPrice = document.createElement("p");
       menuPrice.textContent = item.price;
+      menuPrice.id = "price";
       section.appendChild(menuPrice);
 
       article.appendChild(section);
+
+      const hr = document.createElement("hr");
+      article.appendChild(hr);
     });
 
     content.appendChild(article);
