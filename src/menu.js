@@ -78,17 +78,14 @@ export const menu = () => {
 
       const menuItems = document.createElement("p");
       menuItems.textContent = item.name;
-      section.appendChild(menuItems);
 
       const menuPrice = document.createElement("p");
       menuPrice.textContent = item.price;
       menuPrice.id = "price";
-      section.appendChild(menuPrice);
-
-      article.appendChild(section);
+      section.append(menuItems, menuPrice);
 
       const hr = document.createElement("hr");
-      article.appendChild(hr);
+      article.append(section, hr);
     });
 
     content.appendChild(article);
