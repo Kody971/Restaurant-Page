@@ -42,7 +42,7 @@ export const home = () => {
 
   // create detail open and address
   const container = document.createElement("div");
-  container.className = "horizontalLayout";
+
   container.id = "container";
 
   const containerTime = document.createElement("section");
@@ -66,7 +66,7 @@ export const home = () => {
   //
   const line = document.createElement("hr");
 
-  // create
+  // create article
   const article = document.createElement("article");
   article.className = "horizontalLayout";
 

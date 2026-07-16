@@ -76,7 +76,7 @@ export const menu = () => {
 
     menu.items.forEach((item) => {
       const section = document.createElement("section");
-      section.className = "verticalLayout";
+      section.className = "horizontalLayout";
 
       const menuItems = document.createElement("p");
       menuItems.textContent = item.name;

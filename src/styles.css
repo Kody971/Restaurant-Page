@@ -132,25 +132,30 @@ table {
 body {
   color: #f5f2ec;
   background-color: #141414;
-  max-width: 60vw;
-  min-width: 600px;
-  margin: 0 auto;
 }
 
 .verticalLayout {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0.5rem 0;
+  flex-direction: column;
+  /* justify-content: space-between;
+  align-items: center; */
+  /* width: 100%; */
+  gap: 1rem;
 }
 
 .horizontalLayout {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+.item {
+  flex: 1 1 0px;
 }
 
 #container {
+  display: flex;
+  flex-direction: row;
   gap: 2rem;
 }
 
@@ -183,6 +188,9 @@ button {
 
 #content {
   padding: 3rem 1rem;
+  max-width: 60vw;
+  min-width: 600px;
+  margin: 0 auto;
 }
 
 #menuTitle {
@@ -200,4 +208,18 @@ h2 {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
   font-weight: bold;
   padding: 1.5rem 0;
+}
+
+section {
+  padding: 1rem 0;
+}
+
+.table {
+  width: 35%;
+}
+
+.containerAbout {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
