@@ -1,14 +1,15 @@
 export const menu = () => {
   const content = document.querySelector("#content");
+  content.replaceChildren();
 
-  const jargon = document.createElement("p");
-  jargon.textContent = "TONIGHT'S FIRE";
-  jargon.id = "jargon";
-  content.appendChild(jargon);
+  const title = document.createElement("p");
+  title.textContent = "TONIGHT'S FIRE";
+  title.id = "title";
 
-  const title = document.createElement("h2");
-  title.textContent = "Menu";
-  content.appendChild(title);
+  const menuTitle = document.createElement("h2");
+  menuTitle.textContent = "Menu";
+
+  content.append(title, menuTitle);
 
   const listMenu = [
     {
@@ -75,6 +76,7 @@ export const menu = () => {
 
     menu.items.forEach((item) => {
       const section = document.createElement("section");
+      section.className = "verticalLayout";
 
       const menuItems = document.createElement("p");
       menuItems.textContent = item.name;
@@ -82,9 +84,11 @@ export const menu = () => {
       const menuPrice = document.createElement("p");
       menuPrice.textContent = item.price;
       menuPrice.id = "price";
+
       section.append(menuItems, menuPrice);
 
       const hr = document.createElement("hr");
+
       article.append(section, hr);
     });
 

@@ -132,14 +132,26 @@ table {
 body {
   color: #f5f2ec;
   background-color: #141414;
+  max-width: 60vw;
+  min-width: 600px;
+  margin: 0 auto;
 }
 
-section {
+.verticalLayout {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0.5rem 0;
+}
+
+.horizontalLayout {
+  display: flex;
+  flex-direction: row;
+}
+
+#container {
+  gap: 2rem;
 }
 
 article {
@@ -177,9 +189,10 @@ button {
   padding: 1rem 0;
 }
 
-#jargon,
+#title,
 #menuTitle,
-#price {
+#price,
+span {
   color: #ff4e1f;
 }
 
